@@ -13,54 +13,48 @@ class PersonalInfoForm extends Component {
                 <div id="personalInfo" data-section="personalInfo">
                     <input 
                         type="text" 
-                        data-ref="firstName" 
+                        id="firstName" 
                         placeholder="First Name" 
                         onChange={this.props.handleChange}
                         value={this.props.personalInfo.firstName} 
                     />
                     <input 
                         type="text" 
-                        data-ref="lastName" 
+                        id="lastName" 
                         placeholder="Last Name" 
                         onChange={this.props.handleChange}
                         value={this.props.personalInfo.lastName} 
                     />
                     <input 
                         type="text" 
-                        data-ref="title" 
+                        id="title" 
                         placeholder="Position Title" 
                         onChange={this.props.handleChange} 
                         value={this.props.personalInfo.title} 
                     />
                     <input 
-                        type="file" 
-                        data-ref="photo" 
-                        placeholder="Personal Photo" 
-                        onChange={this.props.handleChange} 
-                    />
-                    <input 
                         type="text" 
-                        data-ref="address" 
+                        id="address" 
                         placeholder="Address" 
                         onChange={this.props.handleChange} 
                         value={this.props.personalInfo.address}
                     />
                     <input 
                         type="text" 
-                        data-ref="phoneNumber" 
+                        id="phoneNumber" 
                         placeholder="Phone Number" 
                         onChange={this.props.handleChange} 
                         value={this.props.personalInfo.phoneNumber} 
                     />
                     <input 
                         type="email" 
-                        data-ref="email" 
+                        id="email" 
                         placeholder="Email" 
                         onChange={this.props.handleChange} 
                         value={this.props.personalInfo.email} 
                     />
                     <textarea  
-                        data-ref="bio" 
+                        id="bio" 
                         placeholder="Bio" 
                         onChange={this.props.handleChange} 
                         value={this.props.personalInfo.bio} 

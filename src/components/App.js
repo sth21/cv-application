@@ -15,7 +15,6 @@ class App extends Component {
                 firstName: '',
                 lastName: '',
                 title: '',
-                photo: '',
                 address: '',
                 phoneNumber: '',
                 email: '',
@@ -51,17 +50,15 @@ class App extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.addExperience = this.addExperience.bind(this);
         this.addEducation = this.addEducation.bind(this);
-        this.removeExperience = this.removeExperience.bind(this);
-        this.removeEducation = this.removeEducation.bind(this);
+        this.removeList = this.removeList.bind(this);
     }
 
     handleChange(e) {
         const section = e.target.parentNode.dataset.section;
-        const ref = e.target.dataset.ref;
-        console.log(ref);
+        const ref = e.target.getAttribute('id');
         const state = this.state;
         if (section !== 'personalInfo') {
-            const index = e.target.parentNode.dataset.number;
+            const index = e.target.parentNode.dataset.index;
             state[section][index][ref] = e.target.value;
         } else {
             state[section][ref] = e.target.value;
@@ -100,12 +97,16 @@ class App extends Component {
         this.setState({ state });
     }
 
-    removeExperience() {
-
-    }
-
-    removeEducation() {
-
+    removeList(e) {
+        const element = e.target.parentNode;
+        const section = element.dataset.section;
+        const index = parseInt(element.dataset.index);
+        const state = this.state;
+        state[section].splice(index, 1);
+        for (let i = 0; i < state[section].length; i += 1) {
+            state[section][i].index = i;
+        }
+        this.setState({ state });
     }
 
     render() {
@@ -121,14 +122,14 @@ class App extends Component {
                     <ExperienceForm 
                         experienceList={this.state.experiences}
                         handleChange={this.handleChange} 
-                        removeExperience={this.removeExperience} 
+                        removeExperience={this.removeList} 
                         addExperience={this.addExperience} 
                     />
                     <EducationForm 
                         educationList={this.state.education}
                         handleChange={this.handleChange} 
                         addEducation={this.addEducation} 
-                        removeEducation={this.removeEducation}
+                        removeEducation={this.removeList}
                     />
                 </form>
             </div>

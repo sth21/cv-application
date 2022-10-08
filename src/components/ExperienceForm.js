@@ -12,38 +12,43 @@ class ExperienceForm extends Component {
                 <h1>Work Experiences</h1>
                 {this.props.experienceList.map((experience, index) => {
                     return (
-                        <div id="experience" data-experience-number={index} data-section="experiences">
+                        <div id="experience" data-index={index} data-section="experiences">
                             <input 
                                 type="text" 
                                 id="position" 
                                 placeholder="Position" 
-                                onChange={this.handleChange} 
+                                onChange={this.props.handleChange}
+                                value={experience.position || ""} 
                             />
                             <input 
                                 type="text" 
                                 id="company" 
                                 placeholder="Company" 
-                                onChange={this.handleChange} 
+                                onChange={this.props.handleChange} 
+                                value={experience.company || ""} 
                             />
                             <input 
                                 type="text" 
                                 id="city" 
                                 placeholder="City" 
-                                onChange={this.handleChange} 
+                                onChange={this.props.handleChange} 
+                                value={experience.city || ""} 
                             />
                             <input 
                                 type="text" 
-                                id="start-date" 
+                                id="startDate" 
                                 placeholder="From" 
-                                onChange={this.handleChange} 
+                                onChange={this.props.handleChange} 
+                                value={experience.startDate || ""} 
                             />
                             <input 
                                 type="text" 
-                                id="end-date" 
+                                id="endDate" 
                                 placeholder="To" 
-                                onChange={this.handleChange} 
+                                onChange={this.props.handleChange}
+                                value={experience.endDate || ""}  
                             />
-                            <button type="button" id="remove-experience">Remove Experience</button>
+                            <button type="button" id="remove-experience" onClick={this.props.removeExperience}>Remove Experience</button>
                         </div>
                     )
                 })}
