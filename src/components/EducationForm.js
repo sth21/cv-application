@@ -49,13 +49,11 @@ class EducationForm extends Component {
                                 placeholder="To" 
                                 onChange={this.props.handleChange} 
                             />
+                            <button type="button" id="remove-education" onClick={this.props.removeEducation}>Remove Education</button>
                         </div>
                     )
                 })}
-                <div id="education-control">
-                    <button type="button" id="add-education" onClick={this.props.addEducation}>Add Education</button>
-                    <button type="button" id="remove-education" onClick={this.props.removeEducation}>Remove Education</button>
-                </div>
+                <button type="button" id="add-education" onClick={this.props.addEducation}>Add Education</button>
             </div>
         );
     }
