@@ -14,7 +14,6 @@ class App extends Component {
             personalInfo: {
                 firstName: '',
                 lastName: '',
-                title: '',
                 address: '',
                 phoneNumber: '',
                 email: '',
@@ -26,9 +25,9 @@ class App extends Component {
                 {
                     title: '',
                     company: '',
-                    location: '',
                     startDate: '',
                     endDate: '',
+                    description: '',
                     index: 0,
                     key: uniqid(),
                 },
@@ -37,11 +36,11 @@ class App extends Component {
             education: [
                 {
                     schoolName: '',
-                    location: '',
                     degree: '',
                     subject: '',
                     startDate: '',
                     endDate: '',
+                    description: '',
                     index: 0,
                     key: uniqid(),
                 },
@@ -62,7 +61,6 @@ class App extends Component {
             state[section][index][ref] = e.target.value;
         } else {
             state[section][ref] = e.target.value;
-            console.log(state[section][ref]);
         }
         this.setState({ state });
     }
@@ -72,9 +70,9 @@ class App extends Component {
         const newExperience = {
             title: '',
             company: '',
-            location: '',
             startDate: '',
             endDate: '',
+            description: '',
             index: state.experiences.length,    
         };
         state.experiences[state.experiences.length] = newExperience;
@@ -82,15 +80,14 @@ class App extends Component {
     }
 
     addEducation() {
-        console.log('y');
         const state = this.state;
         const newEducation = {
             schoolName: '',
-            location: '',
             degree: '',
             subject: '',
             startDate: '',
             endDate: '',
+            description: '',
             index: state.education.length,    
         };
         state.education[state.education.length] = newEducation;

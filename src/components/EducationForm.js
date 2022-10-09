@@ -18,42 +18,41 @@ class EducationForm extends Component {
                                 id="schoolName" 
                                 placeholder="School Name" 
                                 onChange={this.props.handleChange}
-                                value={education.schoolName || ""}  
-                            />
-                            <input 
-                                type="text" 
-                                id="city" 
-                                placeholder="City" 
-                                onChange={this.props.handleChange} 
-                                value={education.city || ""}  
+                                value={education.schoolName || ''}  
                             />
                             <input 
                                 type="text" 
                                 id="degree" 
                                 placeholder="Type of Degree" 
                                 onChange={this.props.handleChange}
-                                value={education.degree || ""} 
+                                value={education.degree || ''} 
                             />
                             <input 
                                 type="text" 
                                 id="subject" 
                                 placeholder="Subject of Degree" 
                                 onChange={this.props.handleChange}
-                                value={education.subject || ""} 
+                                value={education.subject || ''} 
                             />
                             <input 
                                 type="text" 
                                 id="startDate" 
                                 placeholder="From" 
                                 onChange={this.props.handleChange}
-                                value={education.startDate || ""} 
+                                value={education.startDate || ''} 
                             />
                             <input 
                                 type="text" 
                                 id="endDate" 
                                 placeholder="To" 
                                 onChange={this.props.handleChange}
-                                value={education.endDate || ""} 
+                                value={education.endDate || ''} 
+                            />
+                            <textarea  
+                                id="description" 
+                                placeholder="Description" 
+                                onChange={this.props.handleChange} 
+                                value={education.description || ''} 
                             />
                             <button type="button" id="remove-education" onClick={this.props.removeEducation}>Remove Education</button>
                         </div>

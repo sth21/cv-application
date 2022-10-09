@@ -27,13 +27,6 @@ class PersonalInfoForm extends Component {
                     />
                     <input 
                         type="text" 
-                        id="title" 
-                        placeholder="Position Title" 
-                        onChange={this.props.handleChange} 
-                        value={this.props.personalInfo.title} 
-                    />
-                    <input 
-                        type="text" 
                         id="address" 
                         placeholder="Address" 
                         onChange={this.props.handleChange} 
@@ -58,7 +51,7 @@ class PersonalInfoForm extends Component {
                         placeholder="Bio" 
                         onChange={this.props.handleChange} 
                         value={this.props.personalInfo.bio} 
-                    ></textarea>
+                    />
                 </div>
             </div>
         );

@@ -18,35 +18,34 @@ class ExperienceForm extends Component {
                                 id="position" 
                                 placeholder="Position" 
                                 onChange={this.props.handleChange}
-                                value={experience.position || ""} 
+                                value={experience.position || ''} 
                             />
                             <input 
                                 type="text" 
                                 id="company" 
                                 placeholder="Company" 
                                 onChange={this.props.handleChange} 
-                                value={experience.company || ""} 
-                            />
-                            <input 
-                                type="text" 
-                                id="city" 
-                                placeholder="City" 
-                                onChange={this.props.handleChange} 
-                                value={experience.city || ""} 
+                                value={experience.company || ''} 
                             />
                             <input 
                                 type="text" 
                                 id="startDate" 
                                 placeholder="From" 
                                 onChange={this.props.handleChange} 
-                                value={experience.startDate || ""} 
+                                value={experience.startDate || ''} 
                             />
                             <input 
                                 type="text" 
                                 id="endDate" 
                                 placeholder="To" 
                                 onChange={this.props.handleChange}
-                                value={experience.endDate || ""}  
+                                value={experience.endDate || ''}  
+                            />
+                            <textarea  
+                                id="description" 
+                                placeholder="Description" 
+                                onChange={this.props.handleChange} 
+                                value={experience.description || ''} 
                             />
                             <button type="button" id="remove-experience" onClick={this.props.removeExperience}>Remove Experience</button>
                         </div>
