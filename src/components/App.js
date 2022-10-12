@@ -130,6 +130,7 @@ class App extends Component {
                         removeEducation={this.removeList}
                     />
                 </form>
+                <CV info={this.state}/>
             </div>
         )
     }

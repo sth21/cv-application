@@ -16,10 +16,10 @@ class ExperienceForm extends Component {
                         <div id="experience" data-index={index} data-section="experiences">
                             <input 
                                 type="text" 
-                                id="position" 
+                                id="title" 
                                 placeholder="Position" 
                                 onChange={this.props.handleChange}
-                                value={experience.position || ''} 
+                                value={experience.title || ''} 
                             />
                             <input 
                                 type="text" 
