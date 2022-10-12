@@ -13,9 +13,11 @@ class PersonalInfo extends Component {
 
         return (
             <div id="PersonalInfo">
-                <h1 id="name">{info.firstName} {info.lastName}</h1>
-                <h2 id="contact">{info.address} // {info.phoneNumber} // {info.email}</h2>
-                <p id="bio">{info.bio}</p>
+                <div id="container">
+                    <h1 id="name">{info.firstName} {info.lastName}</h1>
+                    <h2 id="contact">{info.address} // {info.phoneNumber} // {info.email}</h2>
+                    <p id="bio">{info.bio}</p>
+                </div>
             </div>
         );
     }

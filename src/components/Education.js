@@ -16,9 +16,9 @@ class Education extends Component {
                 {info.map((education) => {
                     return (
                         <div id="education">
-                            <h2>{education.schoolName}</h2>
+                            <h2>{education.degree} in {education.subject}</h2>
+                            <h3>{education.schoolName}</h3>
                             <h3>{education.startDate} - {education.endDate}</h3>
-                            <h3>{education.degree} in {education.subject}</h3>
                             <p>{education.description}</p>
                         </div>
                     );
