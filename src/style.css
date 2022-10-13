@@ -164,6 +164,11 @@ textarea {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 5%;
+}
+
+#CV > #PersonalInfo {
+    gap: 10%;
 }
 
 #bio {
@@ -172,10 +177,13 @@ textarea {
 
 #CV h1 {
     font-size: 3.5rem;
+    border-bottom: 1px solid black;
+    width: 100%;
 }
 
 #CV h2 {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 #CV h3 {
