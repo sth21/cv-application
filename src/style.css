@@ -59,11 +59,11 @@ body {
     padding: 2.5%;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    gap: 5%;
+    gap: 10%;
 }
 
 #CVForm {
-    height: 40%;
+    height: 31%;
     width: 100%;
     gap: 2.5%;
     display: grid;
@@ -82,7 +82,7 @@ body {
 #CVForm > div {
     height: 100%;
     gap: 2.5%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 #CVForm > div > div {
@@ -139,14 +139,14 @@ textarea {
 }
 
 #CV {
-    height: 50%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 10%;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 #CV > div {
@@ -158,17 +158,16 @@ textarea {
     gap: 5%;
 }
 
-#experience, #education {
-    gap: 10%;
-}
-
 #CV > div > div {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10%;
+}
+
+#bio {
+    word-wrap:break-word;
 }
 
 #CV h1 {
@@ -185,4 +184,8 @@ textarea {
 
 #CV p {
     font-size: 1.25rem;
+}
+
+#CV p {
+    margin-top: 10px;
 }
