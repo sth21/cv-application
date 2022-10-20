@@ -1,9 +1,9 @@
 /* eslint-disable no-useless-constructor */
 
 import React, { Component } from "react";
-import PersonalInfo from "./PersonalInfo";
-import Experience from "./Experience";
-import Education from "./Education";
+import {PersonalInfo, PersonalInfoFn} from "./PersonalInfo";
+import {Experience, ExperienceFn} from "./Experience";
+import {Education, EducationFn} from "./Education";
 
 class CV extends Component {
     constructor(props) {
@@ -21,4 +21,24 @@ class CV extends Component {
     }
 }
 
-export default CV;
+/*
+
+
+Above => Class Component
+
+Below => Function Component
+
+
+*/
+
+function CVFn (props) {
+    return (
+        <div id="CV">
+            <PersonalInfoFn info={ props.info.personalInfo } />
+            <ExperienceFn info={ props.info.experiences } />
+            <EducationFn info={ props.info.education } />
+        </div> 
+    );
+}
+
+export { CV, CVFn };

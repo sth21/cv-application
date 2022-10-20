@@ -23,4 +23,26 @@ class PersonalInfo extends Component {
     }
 }
 
-export default PersonalInfo;
+/*
+
+
+Above => Class Component
+
+Below => Function Component
+
+
+*/
+
+function PersonalInfoFn (props) {
+    return (
+        <div id="PersonalInfo">
+            <h1 id="name">{props.info.firstName} {props.info.lastName}</h1>
+            <div id="container">
+                <h2 id="contact">{props.info.address} // {props.info.phoneNumber} // {props.info.email}</h2>
+                <p id="bio">{props.info.bio}</p>
+            </div>
+        </div>
+    );
+}
+
+export { PersonalInfo, PersonalInfoFn };

@@ -27,4 +27,31 @@ class Experience extends Component {
     }
 }
 
-export default Experience;
+/*
+
+
+Above => Class Component
+
+Below => Function Component
+
+
+*/
+
+function ExperienceFn (props) {
+    return (
+        <div id="Experience">
+            <h1>Work Experience</h1>
+            {props.info.map((experience) => {
+                return (
+                    <div id="experience">
+                        <h2>{experience.title} - {experience.company}</h2>
+                        <h3>{experience.startDate} - {experience.endDate}</h3>
+                        <p>{experience.description}</p>
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+
+export { Experience, ExperienceFn };
