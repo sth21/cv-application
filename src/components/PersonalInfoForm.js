@@ -17,41 +17,41 @@ class PersonalInfoForm extends Component {
                         id="firstName" 
                         placeholder="First Name" 
                         onChange={this.props.handleChange}
-                        value={this.props.personalInfo.firstName} 
+                        value={this.props.personalInfo.firstName || ''} 
                     />
                     <input 
                         type="text" 
                         id="lastName" 
                         placeholder="Last Name" 
                         onChange={this.props.handleChange}
-                        value={this.props.personalInfo.lastName} 
+                        value={this.props.personalInfo.lastName || ''} 
                     />
                     <input 
                         type="text" 
                         id="address" 
                         placeholder="Address" 
                         onChange={this.props.handleChange} 
-                        value={this.props.personalInfo.address}
+                        value={this.props.personalInfo.address || ''}
                     />
                     <input 
                         type="text" 
                         id="phoneNumber" 
                         placeholder="Phone Number" 
                         onChange={this.props.handleChange} 
-                        value={this.props.personalInfo.phoneNumber} 
+                        value={this.props.personalInfo.phoneNumber || ''} 
                     />
                     <input 
                         type="email" 
                         id="email" 
                         placeholder="Email" 
                         onChange={this.props.handleChange} 
-                        value={this.props.personalInfo.email} 
+                        value={this.props.personalInfo.email || ''} 
                     />
                     <textarea  
                         id="bio" 
                         placeholder="Bio" 
                         onChange={this.props.handleChange} 
-                        value={this.props.personalInfo.bio} 
+                        value={this.props.personalInfo.bio || ''} 
                     />
                 </div>
             </div>
@@ -79,41 +79,41 @@ function PersonalInfoFormFn (props) {
                     id="firstName" 
                     placeholder="First Name" 
                     onChange={props.handleChange}
-                    value={props.personalInfo.firstName} 
+                    value={props.personalInfo.firstName || ''} 
                 />
                 <input 
                     type="text" 
                     id="lastName" 
                     placeholder="Last Name" 
                     onChange={props.handleChange}
-                    value={props.personalInfo.lastName} 
+                    value={props.personalInfo.lastName || ''} 
                 />
                 <input 
                     type="text" 
                     id="address" 
                     placeholder="Address" 
                     onChange={props.handleChange} 
-                    value={props.personalInfo.address}
+                    value={props.personalInfo.address || ''}
                 />
                 <input 
                     type="text" 
                     id="phoneNumber" 
                     placeholder="Phone Number" 
                     onChange={props.handleChange} 
-                    value={props.personalInfo.phoneNumber} 
+                    value={props.personalInfo.phoneNumber || ''} 
                 />
                 <input 
                     type="email" 
                     id="email" 
                     placeholder="Email" 
                     onChange={props.handleChange} 
-                    value={props.personalInfo.email} 
+                    value={props.personalInfo.email || ''} 
                 />
                 <textarea  
                     id="bio" 
                     placeholder="Bio" 
                     onChange={props.handleChange} 
-                    value={props.personalInfo.bio} 
+                    value={props.personalInfo.bio || ''} 
                 />
             </div>
         </div>

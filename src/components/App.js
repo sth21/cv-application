@@ -119,13 +119,13 @@ class App extends Component {
                         personalInfo={personalInfo} 
                     />
                     <ExperienceForm 
-                        experienceList={this.state.experiences}
+                        experienceList={experiences}
                         handleChange={this.handleChange} 
                         removeExperience={this.removeList} 
                         addExperience={this.addExperience} 
                     />
                     <EducationForm 
-                        educationList={this.state.education}
+                        educationList={education}
                         handleChange={this.handleChange} 
                         addEducation={this.addEducation} 
                         removeEducation={this.removeList}
@@ -183,20 +183,20 @@ function AppFn() {
         const ref = e.target.getAttribute('id');
         switch (e.target.parentNode.dataset.section) {
             case 'personalInfo' :
-                const personalInfoRef = personalInfo;
+                const personalInfoRef = {...personalInfo};
                 personalInfoRef[ref] = e.target.value;
                 setPersonalInfo(personalInfoRef);
                 break;
 
             case 'experiences' :
-                const experiencesRef = experiences;
+                const experiencesRef = experiences.slice();
                 const experiencesIndex = e.target.parentNode.dataset.index;
                 experiencesRef[experiencesIndex][ref] = e.target.value;
                 setExperiences(experiencesRef);
                 break;
 
             case 'education' :
-                const educationRef = education;
+                const educationRef = education.slice();
                 const educationIndex = e.target.parentNode.dataset.index;
                 educationRef[educationIndex][ref] = e.target.value;
                 setEducation(educationRef);
@@ -268,33 +268,27 @@ function AppFn() {
         }
     }
 
-    const info = {
-        personalInfo: personalInfo,
-        experiences: experiences,
-        education: education,
-    };
-
     return (
         <div id="project-container">
             <form id="CVForm">
-                <PersonalInfoForm 
+                <PersonalInfoFormFn 
                     handleChange={handleChange} 
                     personalInfo={personalInfo} 
                 />
-                <ExperienceForm 
+                <ExperienceFormFn 
                     experienceList={experiences}
                     handleChange={handleChange} 
                     removeExperience={removeFromList} 
                     addExperience={addToList} 
                 />
-                <EducationForm 
+                <EducationFormFn 
                     educationList={education}
                     handleChange={handleChange} 
                     addEducation={addToList} 
                     removeEducation={removeFromList}
                 />
             </form>
-            <CVFn info={info}/>
+            <CVFn info={{personalInfo, experiences, education}}/>
         </div>
     );
 }
